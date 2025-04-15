@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap');
+
+
+body{
+    background-color: #a21399;
+}
+
+*{
+    margin:0;
+    padding: 0;
+
+}
+
+nav {
+    font-family: 'ubuntu', 'Trebuchet MS', sans-serif;
+
+}
+nav ul{
+    display:  flex;
+    list-style-type: style type lower-roman;
+    height: 80px;
+    background-color:rgb(19, 130, 41);
+    color:rgb(30, 13, 100);
+
+}
+.brand img{
+    width: 45px;
+}
+body{
+    background-attachment: green;
+    
+}

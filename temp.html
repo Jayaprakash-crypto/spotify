@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="temp.css">
+  
+</head>
+<body>
+  <div class="converter">
+    <h2>Temperature Converter</h2>
+    
+    <input type="text" id="tempInput" placeholder="Enter temperature">
+    <div class="error" id="errorMsg"></div>
+
+    <select id="unitFrom">
+      <option value="C">Celsius (°C)</option>
+      <option value="F">Fahrenheit (°F)</option>
+      <option value="K">Kelvin (K)</option>
+    </select>
+
+    <select id="unitTo">
+      <option value="F">Fahrenheit (°F)</option>
+      <option value="C">Celsius (°C)</option>
+      <option value="K">Kelvin (K)</option>
+    </select>
+
+    <button onclick="convertTemp()">Convert</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function convertTemp() {
+      const temp = parseFloat(document.getElementById("tempInput").value);
+      const fromUnit = document.getElementById("unitFrom").value;
+      const toUnit = document.getElementById("unitTo").value;
+      const resultEl = document.getElementById("result");
+      const errorEl = document.getElementById("errorMsg");
+
+      // Clear previous output
+      resultEl.textContent = '';
+      errorEl.textContent = '';
+
+      if (isNaN(temp)) {
+        errorEl.textContent = "Please enter a valid number.";
+        return;
+      }
+
+      if (fromUnit === toUnit) {
+        resultEl.textContent = `Same unit selected. Temperature is ${temp}°${toUnit}`;
+        return;
+      }
+
+      let converted;
+
+      // Convert from 'fromUnit' to Celsius first
+      let tempInCelsius;
+      switch(fromUnit) {
+        case "C": tempInCelsius = temp; break; Clipboard
+        case "F": tempInCelsius = (temp - 32) * 5/9;*

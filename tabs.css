@@ -1,0 +1,55 @@
+@media screen and (max-width: 500px){
+
+.child-1 {
+    background-color: blue;
+    color: aliceblue;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+.child-2{
+    background-color: yellow;
+    color: black;
+    grid-column :2/3;
+    grid-row:1/2;
+}
+.child-3{
+    background-color: red;
+    color: black;
+    grid-column :4/5;
+    grid-row:1/2;
+}
+.child-4{
+    background-color:greenyellow;
+    color: black;
+    grid-column :2/3;
+    grid-row:2/3;
+
+}
+.child-5{
+    background-color: pink ;
+    color: black;
+    display: none;
+}
+.child-6{
+    background-color: skyblue;
+    color: black;
+    grid-column :4/5;
+    grid-row:2/4;
+}
+.child-7{
+    background-color: chocolate;
+    color: black;
+    grid-column :1/2;
+    grid-row:3/2;
+}
+.child-8{
+    background-color: orange;
+    color: black;
+    grid-column :1/4;
+    grid-row:2/5;
+}
+    
+}

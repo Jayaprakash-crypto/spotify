@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>respkonsive</title>
+    <style>
+        .parent{
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            grid-template-rows: 50px 250px 120px 120px 150px;
+            gap: 20px;
+            background-color: black;
+        }
+        .child-1 {
+            background-color: blue;
+            color: aliceblue;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 3;
+
+        }
+        .child-2{
+            background-color: yellow;
+            color: black;
+            grid-column :2/4;
+            grid-row:1/2;
+        }
+        .child-3{
+            background-color: red;
+            color: black;
+            grid-column :4/6;
+            grid-row:1/2;
+        }
+        .child-4{
+            background-color:greenyellow;
+            color: black;
+            grid-column :2/3;
+            grid-row:2/4;
+
+        }
+        .child-5{
+             background-color: pink ;
+            color: black;
+            grid-column :3/5;
+            grid-row:2/4;
+        }
+        .child-6{
+            background-color: skyblue;
+            color: black;
+            grid-column :5/6;
+            grid-row:2/5;
+        }
+        .child-7{
+            background-color: chocolate;
+            color: black;
+            grid-column :1/2;
+            grid-row:3/5;
+        }
+        .child-8{
+            background-color: orange;
+            color: black;
+            grid-column :2/4;
+            grid-row:4/5;
+        }
+</style>
+<link rel="stylesheet" href="tabs.css">
+</head>
+<body>
+    <div class="parent">
+    <div class="child-1">dhanush</div>
+    <div class="child-2">ravi</div>
+    <div class="child-3">teja</div>
+    <div class="child-4">prabha</div>
+    <div class="child-5">allu arjun</div>
+    <div class="child-6">pream</div>
+    <div class="child-7">ram</div>
+    <div class="child-8">hari</div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotifyMusic</title>
+    <link rel="stylesheet" href="home.css" >
+    
+</head>
+<body>
+    
+</body>
+</html>
+    <div className="SpotifyMusic">
+      <div className="flex items-center justify-between mb-9">
+        <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+        <div className="ml-4">
+          <h2 className="text-lg font-bold">spotify</h2>
+          <p className="text-sm text-gray-600">{currentSong.artist}</p>
+        </div>
+        <div className="ml-auto">
+          {isPlaying ? (
+            <button onClick={handlePause} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+              Pause
+            </button>
+          ) : (
+            <button onClick={handlePlay} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+              Play
+            </button>
+            <li><a href="spotify.html">music</a></li>
+          )}
+        </div>
+      </div>
+      <div className="flex items-center justify-between mb-4">
+        <button onClick={handlePreviousSong} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">
+          Previous
+        </button>
+        <p className="text-sm text-gray-600">{currentSong.duration}</p>
+        <button onClick={handleNextSong} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">
+          Next
+        </button>
+      </div>
+      <ul>
+        {songs.map((song, index) => (
+          <li key={index} className="py-2">
+            <button onClick={() => setCurrentSong(song)} className="text-left w-full">
+              <h2 className="text-lg <form>
+                
+              </form>">{song.title}</h2>
+              <p className="text-sm text-gray-600">{song.artist}</p>
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default SpotifyMusic;
